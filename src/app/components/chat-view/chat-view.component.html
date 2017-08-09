@@ -1,0 +1,108 @@
+<div class="card chat-window">
+  <div class="card-header">
+    <div class="card-header-title"><i class="fa fa-user"></i> <span i18n="Title ChatWindow chatView|Title ChatWindow chatView@@titleChatWindowChatView">Chat Window</span>
+      <button class="btn btn-warning float-right" data-toggle="modal" data-target="#chooseParticipants" style="cursor:pointer"
+        i18n="Button Add Participant chatView|Button Add Participant chatView@@btnAddParticipantChatView"><i class="fa fa-user-plus"></i> Add Participant</button>
+    </div>
+    <div i18n="Participants list chatView|Participants list chatView@@participantsListChatView">Participants:
+      <span *ngFor="let participant of chat.participants">
+          <a href="#">{{participant.username}}</a>
+      </span>
+    </div>
+  </div>
+  <div class="card-block message-window" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <ul class="messages">
+      <div class="message_template" *ngFor="let message of arrMessages">
+        <li class="message" [ngClass]="message.position">
+          <!-- <li class="message right"> -->
+          <div class="avatar"></div>
+          <div class="text_wrapper">
+            <div class="text" *ngIf="message.msgType=='text'">{{message.msgContent}}<span style="font-style:italic">- {{message.createdAt | date :'short'}}</span></div>
+            <div class="text" *ngIf="message.msgType=='image'"><img src="{{message.msgContent}}"><span style="font-style:italic">- {{message.createdAt | date :'short'}}</span></div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div class="card-footer small text-muted">
+    <div class="input-group">
+      <input id="btn-input" type="text" class="form-control input-sm" (keyup.enter)="sendTextMsg(msgInput.value); msgInput.value=''"
+        placeholder="Type your message here..." i18n-placeholder="Type your message here... placeholder" #msgInput/>
+      <span class="input-group-btn">
+        <button class="btn btn-lg send-button mr-1" id="btn-chat" (click)="sendTextMsg(msgInput.value); msgInput.value=''" i18n="Button Send Message chatView|Button Send Message chatView@@btnSendChatView">Send</button>
+      </span>
+      <span class="input-group-btn">
+        <button class="btn btn-lg draw-button" id="btn-canvas" data-toggle="modal" data-target="#canvasModal" i18n="Button Canvas chatView|Button Canvas chatView@@btnCanvasChatView">Draw</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="chooseParticipants" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" i18n="Modal Title chatView|Modal Title chatView@@modalTitleChatView">Add Participants</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body participants-modal">
+        <div class="card mb-3">
+          <div class="card-header" i18n="Modal subTitle chatView|Modal subTitle chatView@@modalSubTitleChatView">
+            <i class="fa fa-users"></i> Your Contacts
+          </div>
+          <div class="list-group list-group-flush small">
+            <form [formGroup]="participantsForm">
+              <div formArrayName="selectedContacts">
+                <div class="list-group-item list-group-item-action" *ngFor="let contact of getParticipants(participantsForm); index as i">
+                  <div class="media">
+                    <div class="media-body">
+                      <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [formControlName]="i">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"><strong>{{myProfile.contacts[i].email}}</strong></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="cursor:pointer" i18n="Button Cancel Modal chatView|Button Cancel Modal chatView@@btnCancelModalChatView">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveParticipants()" style="cursor:pointer" i18n="Button Done Modal chatView|Button Done Modal chatView@@btnDoneModalChatView">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Canvas Modal -->
+<div class="modal fade" id="canvasModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width:300px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" i18n="Canvas Title chatView|Canvas Title chatView@@canvasTitleChatView">Send a drawing</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card mb-3">
+          <div class="card-header" i18n="Canvas subTitle chatView|Canvas subTitle chatView@@canvasSubTitleChatView">
+            <i class="fa fa-pencil"></i> Use your mouse to draw on the canvas
+          </div>
+          <canvas id="canvas" width="150" height="125" #myCanvas (mousemove)="draw($event)" (mouseup)="closeMyPath($event)"></canvas>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="cursor:pointer" i18n="Button Cancel Modal chatView|Button Cancel Modal chatView@@btnCancelModalChatView">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveDrawing()" style="cursor:pointer" i18n="Button Done Modal chatView|Button Done Modal chatView@@btnDoneModalChatView">Done</button>
+      </div>
+    </div>
+  </div>
+</div>

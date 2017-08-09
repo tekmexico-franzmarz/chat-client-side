@@ -1,0 +1,98 @@
+<!-- Breadcrumbs -->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#/dashboard">Dashboard</a></li>
+  <li class="breadcrumb-item active" i18n="Breadcrumb Contacts manageContacts|Breadcrumb Contacts manageContacts@@breadContactsManageContacts">Contacts</li>
+  <li class="breadcrumb-item active" i18n="Breadcrumb addRemove manageContacts|Breadcrumb addRemove manageContacts@@breadAddRemoveManageContacts">Add/Remove Contacts</li>
+</ol>
+<div class="container manage-contacts">
+  <form class="form-horizontal" role="form" (ngSubmit)="addContact();" #addContactForm="ngForm">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2 i18n="Title Add Contact manageContacts|Title Add Contact manageContacts@@titleAddContactManageContacts">Add New Contact</h2>
+        <hr style="background-color:white">
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <label for="email" i18n="Search Field manageContacts|Search Field manageContacts@@searchFieldManageContacts">Search by E-Mail Address</label>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+            <input type="text" name="email" class="form-control" id="email" [(ngModel)]="data.email" placeholder="Email Address" i18n-placeholder="Email Address placeholder"
+              required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" autofocus>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-control-feedback">
+          <span class="text-danger align-middle" *ngIf="formErrors.email">
+                            {{formErrors.email}}
+                        </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-5">
+        <button type="submit" [disabled]="!addContactForm.form.valid" class="btn btn-success" i18n="Button Submit manageContacts|Button Submit manageContacts@@btnSubmitManageContacts"><i class="fa fa-user-plus"></i> Send Request</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h2>Your Contact List</h2>
+      <hr style="background-color:white">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card mb-5">
+        <div class="card-header">All Contacts</div>
+        <div class="card-block p-0">
+          <table class="table table-bordered table-sm m-0">
+            <thead class="">
+              <tr>
+                <th>Full Name</th>
+                <th>Registration Date</th>
+                <th>E-mail address</th>
+                <th>Relationship</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer p-0">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end mt-3 mr-3">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active">
+                <span class="page-link">2<span class="sr-only">(current)</span>
+                </span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->

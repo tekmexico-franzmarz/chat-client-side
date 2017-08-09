@@ -1,0 +1,155 @@
+<!-- Breadcrumbs -->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#/dashboard">Dashboard</a></li>
+  <li class="breadcrumb-item active" i18n="Breadcrumb myProfile Settings|Breadcrumb myProfile Settings@@breadcrumbMyProfileSettings">My Profile</li>
+  <li class="breadcrumb-item active" i18n="Breadcrumb Settings|Breadcrumb Settings@@breadcrumbSettings">Settings</li>
+</ol>
+
+<div class="container">
+  <form class="form-horizontal" [formGroup]="profileSettingsForm"  novalidate>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2 i18n="Title Settings|Title Settings@@titleSettings">Your Profile Settings</h2>
+        <hr style="background-color:white">
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <label for="username" i18n="Label Username Settings|Label Username Settings@@labelUsernameSettings">Username</label>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+            <input type="text" id="username" formControlName="username" class="form-control" placeholder="New Username" i18n-placeholder="New Username placeholder"
+              autofocus>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-control-feedback">
+          <span class="text-danger align-middle" *ngIf="formErrors.username">
+                            <i class="fa fa-close"> {{formErrors.username}}</i>
+                </span>
+        </div>
+      </div>
+    </div>
+    <div formGroupName="passwords">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label for="password" i18n="Label Password Settings|Label Password Settings@@labelPasswordSettings">Change Password</label>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" i18n-placeholder="Password placeholder"
+                >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label for="confirmPassword" i18n="Label confirmPassword Settings|Label confirmPassword Settings@@labelConfirmPasswordSettings">Confirm New Password</label>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-repeat"></i></div>
+              <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password"
+                i18n-placeholder="Confirm Password placeholder">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-control-feedback">
+            <span class="text-danger align-middle" *ngIf="formErrors.passwords">
+                  <i class="fa fa-close"> {{formErrors.passwords}}</i>
+                </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+          <label for="lang" i18n="Label changeLang Settings|Label changeLang Settings@@labelChangeLangSettings">Change Language</label>
+        </div>
+        <div class="col-md-5">
+          <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#chooseLanguage" style="cursor:pointer" i18n="Button changeLang Settings|Button changeLang Settings@@btnChangeLangSettings"><i class="fa fa-flag-o"></i> Languages</button>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:15px">
+      <div class="col-md-2"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-5">
+        <button type="submit" class="btn btn-success" (click)="updateProfile()" [disabled]="!profileSettingsForm.valid" i18n="Button Update Settings|Button Update Settings@@btnUpdateSettings"><i class="fa fa-pencil"></i> Update</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="chooseLanguage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" i18n="Title Modal Settings|Title Modal Settings@@titleModalSettings">Select Language</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body languages-modal">
+        <div class="card mb-3">
+          <div class="card-header" i18n="subTitle Modal Settings|subTitle Modal Settings@@subTitleModalSettings">
+            <i class="fa fa-users"></i> Available Languages
+          </div>
+          <div class="list-group list-group-flush small">
+            <form [formGroup]="languagesForm">
+                <div class="list-group-item list-group-item-action" *ngFor="let language of availableLanguages; index as i">
+                  <div class="media">
+                    <div class="media-body">
+                      <label class="custom-control custom-radio">
+                        <input type="radio" value="{{language.locale}}" class="custom-control-input" formControlName="selectedLanguage">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"><strong>{{language.name}}</strong></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="list-group-item list-group-item-action">
+                  <div class="media">
+                    <div class="media-body">
+                      <label class="custom-control custom-radio">
+                        <input type="radio" value="english" class="custom-control-input" formControlName="language">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"><strong>English</strong></span>
+                      </label>
+                      <label class="custom-control custom-radio">
+                        <input type="radio" value="spanish" class="custom-control-input" formControlName="language">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"><strong>Español</strong></span>
+                      </label>
+                    </div>
+                  </div> -->
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="cursor:pointer" i18n="Button Cancel Modal Settings|Button Cancel Modal Settings@@btnCancelModalSettings">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveLanguage(languagesForm)" style="cursor:pointer" i18n="Button Done Modal Settings|Button Done Modal Settings@@btnDoneModalSettings">Done</button>
+      </div>
+    </div>
+  </div>
+</div>

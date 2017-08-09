@@ -1,0 +1,110 @@
+// Variables
+// Gray and Brand Colors for use across theme
+$theme-primary: #fed136;
+$theme-danger: #e74c3c; // Create grayscale
+$gray-dark: #292b2c !default;
+$gray: #464a4c !default;
+$gray-light: #636c72 !default;
+$gray-lighter: #eceeef !default;
+$gray-lightest: #f7f7f9 !default;
+@mixin rotate {
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+
+/*My Custom Styles*/
+
+#mainNav {
+  box-shadow: 0 0 20px 0 $gray;
+  background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+
+#brand-logo {
+  background: url('../../../assets/images/dashboardtest/horizontal-logo2.png') no-repeat transparent;
+  height: 45px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  width: 220px;
+}
+
+a#messagesDropdown>i.fa,
+a#alertsDropdown>i.fa,
+li#logout-link>a {
+  color: $gray-lightest;
+}
+
+ul.right-top-menu {
+  margin-right: 120px;
+}
+
+div#navbarExample>ul#my-sidebar {
+  background: linear-gradient(to right, #cc2b5e 70%, #5f336d);
+}
+
+ul#my-sidebar>li {
+  background: transparent;
+  &:hover {
+    background: linear-gradient(to right, #5C258D, #4389A2)
+  }
+}
+
+#mainNav .navbar-collapse .navbar-nav.sidebar-nav .nav-link-collapse:after {
+  color: $gray-lightest;
+}
+
+ul.contact-list li {
+  background: transparent;
+  &:hover {
+    background: linear-gradient(to right, #5C258D, #4389A2)
+  }
+}
+
+ul.contact-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  background: transparent;
+  color: $gray-lightest;
+  a {
+    color: $gray-lightest
+  }
+  >.nav-item {
+    width: 250px;
+    padding: 0;
+    >.nav-link {
+      padding: 1em;
+      text-decoration: none;
+      color: $gray-lightest;
+    }
+    .sidebar-second-level,
+    .sidebar-third-level {
+      padding-left: 0;
+      list-style: none;
+      background: linear-gradient(to right, #5c258d, #4389a2);
+      >li {
+        width: 250px;
+        cursor:pointer;
+        >a {
+          padding: 1em;
+        }
+      }
+    }
+  }
+}
+
+ul.contact-list::-webkit-scrollbar {
+    display: none;
+}
+
+.user-welcome{
+  color: white;
+  font-size: 18px;
+  >span{
+    font-weight: bold;
+  }
+}

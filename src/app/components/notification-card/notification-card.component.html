@@ -1,0 +1,23 @@
+<div class="card mb-3">
+  <div class="card-header" i18n="Notifications Card Header|Notifications Card Header@@headerNotificationsCard">
+    <i class="fa fa-bell-o"></i> Your Notifications
+  </div>
+  <div class="list-group list-group-flush small">
+    <div class="list-group-item list-group-item-action" *ngFor="let notification of myProfile.notifications">
+      <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+        <div class="media-body">
+          <!-- You have received a <strong>Contact Request</strong> from <strong>{{notification.from}}</strong>. -->
+          {{notification.content || "No new notifications"}}
+          <div class="text-muted smaller">
+            <button class="btn btn-danger btn-xs ml-2" (click)="denyNotif(notification)"><i class="fa fa-trash"></i> Dismiss</button>
+            <button class="btn btn-success btn-xs ml-2" (click)="acceptNotif(notification)"><i class="fa fa-user-plus"></i> Accept</button>
+          </div>
+          <div class="text-muted smaller">{{notification.date | date :'short'}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer small text-muted">
+  </div>
+</div>

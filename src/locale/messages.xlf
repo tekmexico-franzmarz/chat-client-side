@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="homeTitle" datatype="html">
+        <source>Welcome to my app.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\home\home.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title for homepage</note>
+        <note priority="1" from="meaning">Homepage title</note>
+      </trans-unit>
+      <trans-unit id="homeText" datatype="html">
+        <source>This is an Angular 4 application, with NodeJS in the backend and a Mongo DB database. Please click in the bottom
+          below to continue.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\home\home.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Text for homepage</note>
+        <note priority="1" from="meaning">Homepage text</note>
+      </trans-unit>
+      <trans-unit id="homeButton" datatype="html">
+        <source>Log In/Sign Up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\home\home.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Button for homepage</note>
+        <note priority="1" from="meaning">Homepage button</note>
+      </trans-unit>
+      <trans-unit id="loginTitle" datatype="html">
+        <source>Log In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title for login</note>
+        <note priority="1" from="meaning">Login title</note>
+      </trans-unit>
+      <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Email Address placeholder</note>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Password placeholder</note>
+      </trans-unit>
+      <trans-unit id="btnForgotPass" datatype="html">
+        <source>
+                Forgot Password?
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Button forgot password</note>
+        <note priority="1" from="meaning">Login forgotPass</note>
+      </trans-unit>
+      <trans-unit id="btnsignUp" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Sign Up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Button Sign Up</note>
+        <note priority="1" from="meaning">Login signUp</note>
+      </trans-unit>
+      <trans-unit id="btnLogIn" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Log In </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Button Log In</note>
+        <note priority="1" from="meaning">Login logIn</note>
+      </trans-unit>
+      <trans-unit id="titleLoginModal" datatype="html">
+        <source>Forgotten Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Title for Modal</note>
+        <note priority="1" from="meaning">Modal title</note>
+      </trans-unit>
+      <trans-unit id="bodyLoginModal" datatype="html">
+        <source>
+        Send an email to <x id="START_LINK" ctype="x-a"/>fmartinez@tekmexico.com<x id="CLOSE_LINK" ctype="x-a"/> to ask for a password reset.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">Body for Modal</note>
+        <note priority="1" from="meaning">Modal body</note>
+      </trans-unit>
+      <trans-unit id="btnCloseLoginModal" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Button for closing Modal</note>
+        <note priority="1" from="meaning">Modal button</note>
+      </trans-unit>
+      <trans-unit id="signupTitle" datatype="html">
+        <source>Register New User</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title for Signup</note>
+        <note priority="1" from="meaning">Signup title</note>
+      </trans-unit>
+      <trans-unit id="9020f397e4e81fe631c2bb4868ebb90c3cdb8c4a" datatype="html">
+        <source>Your Full Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Your Full Name placeholder</note>
+      </trans-unit>
+      <trans-unit id="6ee94b2404e7f90e7940f5deb41420f469d44c0f" datatype="html">
+        <source>Your Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Your Email Address placeholder</note>
+      </trans-unit>
+      <trans-unit id="baacebdeb711d985846f9aa1aca12c36e5542ccb" datatype="html">
+        <source>Your Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Your Password placeholder</note>
+      </trans-unit>
+      <trans-unit id="c1b7e6d75ff4285c7636c67e5ef259629b81725b" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Confirm Password placeholder</note>
+      </trans-unit>
+      <trans-unit id="btnBackSignup" datatype="html">
+        <source> <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Go Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Button to Go Back</note>
+        <note priority="1" from="meaning">Signup btnBack</note>
+      </trans-unit>
+      <trans-unit id="btnRegisterSignup" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Register</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\register\register.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Button to Register</note>
+        <note priority="1" from="meaning">Signup btnRegister</note>
+      </trans-unit>
+      <trans-unit id="headerComingSoon" datatype="html">
+        <source>
+    <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Coming Soon
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\latest-updates\latest-updates.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Feature Coming Soon</note>
+        <note priority="1" from="meaning">Header Coming Soon</note>
+      </trans-unit>
+      <trans-unit id="footerComingSoon" datatype="html">
+        <source>
+        Coming Soon
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\latest-updates\latest-updates.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Feature Coming Soon</note>
+        <note priority="1" from="meaning">Footer Coming Soon</note>
+      </trans-unit>
+      <trans-unit id="breadContacts" datatype="html">
+        <source>Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\list-contacts\list-contacts.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumbs for Contacts </note>
+        <note priority="1" from="meaning">ListContacts Bread</note>
+      </trans-unit>
+      <trans-unit id="breadListContacts" datatype="html">
+        <source>List All Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\list-contacts\list-contacts.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumbs for List Contacts</note>
+        <note priority="1" from="meaning">ListContacts Bread</note>
+      </trans-unit>
+      <trans-unit id="breadMainNav" datatype="html">
+        <source>My Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main\main.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumbs for MainNav</note>
+        <note priority="1" from="meaning">MainNav Bread</note>
+      </trans-unit>
+      <trans-unit id="messagesCard" datatype="html">
+        <source>
+          26 New Messages!
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Messages Card</note>
+        <note priority="1" from="meaning">Messages Card</note>
+      </trans-unit>
+      <trans-unit id="viewDetails" datatype="html">
+        <source>View Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">View Details</note>
+        <note priority="1" from="meaning">View Details</note>
+      </trans-unit>
+      <trans-unit id="requestsCard" datatype="html">
+        <source>
+          1 Friend Request!
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Requests Card</note>
+        <note priority="1" from="meaning">Requests Card</note>
+      </trans-unit>
+      <trans-unit id="groupChatCard" datatype="html">
+        <source>
+          Start a Group Chat
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Group Chat Card</note>
+        <note priority="1" from="meaning">Group Chat Card</note>
+      </trans-unit>
+      <trans-unit id="logoutCard" datatype="html">
+        <source>
+          Log Out
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Logout Card</note>
+        <note priority="1" from="meaning">Logout Card</note>
+      </trans-unit>
+      <trans-unit id="logoutCardFooter" datatype="html">
+        <source>Click Here to Log Out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-buttons\main-buttons.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Logout Card Footer</note>
+        <note priority="1" from="meaning">Logout Card Footer</note>
+      </trans-unit>
+      <trans-unit id="welcomeSpanMainNav" datatype="html">
+        <source>Welcome</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Welcome Span MainNav</note>
+        <note priority="1" from="meaning">Welcome Span</note>
+      </trans-unit>
+      <trans-unit id="contactsMenuMainNav" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Contacts Menu MainNav</note>
+        <note priority="1" from="meaning">Contacts Menu</note>
+      </trans-unit>
+      <trans-unit id="manageContactsMenuMainNav" datatype="html">
+        <source>Add/Remove Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Manage Contacts subMenu MainNav</note>
+        <note priority="1" from="meaning">Manage Contacts subMenu</note>
+      </trans-unit>
+      <trans-unit id="filterContactsMenuMainNav" datatype="html">
+        <source>Filter By:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Filter Contacts subMenu MainNav</note>
+        <note priority="1" from="meaning">Filter Contacts subMenu</note>
+      </trans-unit>
+      <trans-unit id="onlineContactsMenuMainNav" datatype="html">
+        <source>Online Now</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Filter Contacts subMenu MainNav</note>
+        <note priority="1" from="meaning">Online Now Contacts subMenu</note>
+      </trans-unit>
+      <trans-unit id="relContactsMenuMainNav" datatype="html">
+        <source>Relationship</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Filter Contacts subMenu MainNav</note>
+        <note priority="1" from="meaning">Contacts by Relationship subMenu</note>
+      </trans-unit>
+      <trans-unit id="newGroupMainNav" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> New Group Chat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">New Group Chat MainNav</note>
+        <note priority="1" from="meaning">New Group Chat</note>
+      </trans-unit>
+      <trans-unit id="myProfileMainNav" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> My Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">My Profile Menu MainNav</note>
+        <note priority="1" from="meaning">My Profile Menu</note>
+      </trans-unit>
+      <trans-unit id="settingsMainNav" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Settings subMenu MainNav</note>
+        <note priority="1" from="meaning">Settings subMenu</note>
+      </trans-unit>
+      <trans-unit id="logoutFromMainNav" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Logout subMenu MainNav</note>
+        <note priority="1" from="meaning">Logout subMenu</note>
+      </trans-unit>
+      <trans-unit id="viewHeaderMainNav" datatype="html">
+        <source>View...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <note priority="1" from="description">View Header MainNav</note>
+        <note priority="1" from="meaning">View Header</note>
+      </trans-unit>
+      <trans-unit id="viewYourContactListMainNav" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Your Contact List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">View Your Contact List MainNav</note>
+        <note priority="1" from="meaning">View Your Contact List</note>
+      </trans-unit>
+      <trans-unit id="viewYourConversationListMainNav" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Your Conversations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\main-nav\main-nav.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description">View Your Conversation List MainNav</note>
+        <note priority="1" from="meaning">View Your Conversation List</note>
+      </trans-unit>
+      <trans-unit id="breadContactsManageContacts" datatype="html">
+        <source>Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumb Contacts manageContacts</note>
+        <note priority="1" from="meaning">Breadcrumb Contacts manageContacts</note>
+      </trans-unit>
+      <trans-unit id="breadAddRemoveManageContacts" datatype="html">
+        <source>Add/Remove Contacts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumb addRemove manageContacts</note>
+        <note priority="1" from="meaning">Breadcrumb addRemove manageContacts</note>
+      </trans-unit>
+      <trans-unit id="titleAddContactManageContacts" datatype="html">
+        <source>Add New Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Title Add Contact manageContacts</note>
+        <note priority="1" from="meaning">Title Add Contact manageContacts</note>
+      </trans-unit>
+      <trans-unit id="searchFieldManageContacts" datatype="html">
+        <source>Search by E-Mail Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Search Field manageContacts</note>
+        <note priority="1" from="meaning">Search Field manageContacts</note>
+      </trans-unit>
+      <trans-unit id="btnSubmitManageContacts" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Send Request</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\manage-contacts\manage-contacts.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Button Submit manageContacts</note>
+        <note priority="1" from="meaning">Button Submit manageContacts</note>
+      </trans-unit>
+      <trans-unit id="headerNotificationsCard" datatype="html">
+        <source>
+    <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Your Notifications
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\notification-card\notification-card.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Notifications Card Header</note>
+        <note priority="1" from="meaning">Notifications Card Header</note>
+      </trans-unit>
+      <trans-unit id="breadcrumbMyProfileSettings" datatype="html">
+        <source>My Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumb myProfile Settings</note>
+        <note priority="1" from="meaning">Breadcrumb myProfile Settings</note>
+      </trans-unit>
+      <trans-unit id="breadcrumbSettings" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumb Settings</note>
+        <note priority="1" from="meaning">Breadcrumb Settings</note>
+      </trans-unit>
+      <trans-unit id="titleSettings" datatype="html">
+        <source>Your Profile Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Title Settings</note>
+        <note priority="1" from="meaning">Title Settings</note>
+      </trans-unit>
+      <trans-unit id="labelUsernameSettings" datatype="html">
+        <source>Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Label Username Settings</note>
+        <note priority="1" from="meaning">Label Username Settings</note>
+      </trans-unit>
+      <trans-unit id="0060130cb16fdd1940e84862927ae65b72398b21" datatype="html">
+        <source>New Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">New Username placeholder</note>
+      </trans-unit>
+      <trans-unit id="labelPasswordSettings" datatype="html">
+        <source>Change Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Label Password Settings</note>
+        <note priority="1" from="meaning">Label Password Settings</note>
+      </trans-unit>
+      <trans-unit id="labelConfirmPasswordSettings" datatype="html">
+        <source>Confirm New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Label confirmPassword Settings</note>
+        <note priority="1" from="meaning">Label confirmPassword Settings</note>
+      </trans-unit>
+      <trans-unit id="labelChangeLangSettings" datatype="html">
+        <source>Change Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Label changeLang Settings</note>
+        <note priority="1" from="meaning">Label changeLang Settings</note>
+      </trans-unit>
+      <trans-unit id="btnChangeLangSettings" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Languages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <note priority="1" from="description">Button changeLang Settings</note>
+        <note priority="1" from="meaning">Button changeLang Settings</note>
+      </trans-unit>
+      <trans-unit id="btnUpdateSettings" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">Button Update Settings</note>
+        <note priority="1" from="meaning">Button Update Settings</note>
+      </trans-unit>
+      <trans-unit id="titleModalSettings" datatype="html">
+        <source>Select Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <note priority="1" from="description">Title Modal Settings</note>
+        <note priority="1" from="meaning">Title Modal Settings</note>
+      </trans-unit>
+      <trans-unit id="subTitleModalSettings" datatype="html">
+        <source>
+            <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Available Languages
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <note priority="1" from="description">subTitle Modal Settings</note>
+        <note priority="1" from="meaning">subTitle Modal Settings</note>
+      </trans-unit>
+      <trans-unit id="btnCancelModalSettings" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <note priority="1" from="description">Button Cancel Modal Settings</note>
+        <note priority="1" from="meaning">Button Cancel Modal Settings</note>
+      </trans-unit>
+      <trans-unit id="btnDoneModalSettings" datatype="html">
+        <source>Done</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\settings\settings.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+        <note priority="1" from="description">Button Done Modal Settings</note>
+        <note priority="1" from="meaning">Button Done Modal Settings</note>
+      </trans-unit>
+      <trans-unit id="breadCreateGroupChat" datatype="html">
+        <source>Create Group Chat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Breadcrumb createGroupChat createGroupChat</note>
+        <note priority="1" from="meaning">Breadcrumb createGroupChat createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="titleCreateGroupChat" datatype="html">
+        <source>Create Group Chat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Title createGroupChat</note>
+        <note priority="1" from="meaning">Title createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="labelCreateGroupChat" datatype="html">
+        <source>Group Chat Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Label createGroupChat</note>
+        <note priority="1" from="meaning">Label createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="de31685e1ee2f51b2d31b376653ad4a7e5406104" datatype="html">
+        <source>Group Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Group Name placeholder</note>
+      </trans-unit>
+      <trans-unit id="labelAddParticipantsCreateGroupChat" datatype="html">
+        <source>Add Participants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Label Add Participants createGroupChat</note>
+        <note priority="1" from="meaning">Label Add Participants createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="btnAddCreateGroupChat" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Button Add createGroupChat</note>
+        <note priority="1" from="meaning">Button Add createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="labelSelectedParticipantsCreateGroupChat" datatype="html">
+        <source>Selected Participants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Label Selected Participants createGroupChat</note>
+        <note priority="1" from="meaning">Label Selected Participants createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="btnCreateCreateGroupChat" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Button Create createGroupChat</note>
+        <note priority="1" from="meaning">Button Create createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="titleModalCreateGroupChat" datatype="html">
+        <source>Select Participants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Title Modal createGroupChat</note>
+        <note priority="1" from="meaning">Title Modal createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="subTitleModalCreateGroupChat" datatype="html">
+        <source>
+            <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Your Contacts
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">subTitle Modal createGroupChat</note>
+        <note priority="1" from="meaning">subTitle Modal createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="btnCancelModalCreateGroupChat" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <note priority="1" from="description">Button Cancel Modal createGroupChat</note>
+        <note priority="1" from="meaning">Button Cancel Modal createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="btnDoneModalCreateGroupChat" datatype="html">
+        <source>Done</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\create-group-chat\create-group-chat.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Button Done Modal createGroupChat</note>
+        <note priority="1" from="meaning">Button Done Modal createGroupChat</note>
+      </trans-unit>
+      <trans-unit id="titleChatWindowChatView" datatype="html">
+        <source>Chat Window</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title ChatWindow chatView</note>
+        <note priority="1" from="meaning">Title ChatWindow chatView</note>
+      </trans-unit>
+      <trans-unit id="btnAddParticipantChatView" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Add Participant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Button Add Participant chatView</note>
+        <note priority="1" from="meaning">Button Add Participant chatView</note>
+      </trans-unit>
+      <trans-unit id="participantsListChatView" datatype="html">
+        <source>Participants:
+      <x id="START_TAG_SPAN" ctype="x-span"/>
+          <x id="START_LINK" ctype="x-a"/><x id="INTERPOLATION"/><x id="CLOSE_LINK" ctype="x-a"/>
+      <x id="CLOSE_TAG_SPAN" ctype="x-span"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Participants list chatView</note>
+        <note priority="1" from="meaning">Participants list chatView</note>
+      </trans-unit>
+      <trans-unit id="6b23c608681cfbd52f23e117ec608500bbf5c814" datatype="html">
+        <source>Type your message here...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Type your message here... placeholder</note>
+      </trans-unit>
+      <trans-unit id="btnSendChatView" datatype="html">
+        <source>Send</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Button Send Message chatView</note>
+        <note priority="1" from="meaning">Button Send Message chatView</note>
+      </trans-unit>
+      <trans-unit id="btnCanvasChatView" datatype="html">
+        <source>Draw</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Button Canvas chatView</note>
+        <note priority="1" from="meaning">Button Canvas chatView</note>
+      </trans-unit>
+      <trans-unit id="modalTitleChatView" datatype="html">
+        <source>Add Participants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Modal Title chatView</note>
+        <note priority="1" from="meaning">Modal Title chatView</note>
+      </trans-unit>
+      <trans-unit id="modalSubTitleChatView" datatype="html">
+        <source>
+            <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Your Contacts
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Modal subTitle chatView</note>
+        <note priority="1" from="meaning">Modal subTitle chatView</note>
+      </trans-unit>
+      <trans-unit id="btnCancelModalChatView" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Button Cancel Modal chatView</note>
+        <note priority="1" from="meaning">Button Cancel Modal chatView</note>
+      </trans-unit>
+      <trans-unit id="btnDoneModalChatView" datatype="html">
+        <source>Done</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <note priority="1" from="description">Button Done Modal chatView</note>
+        <note priority="1" from="meaning">Button Done Modal chatView</note>
+      </trans-unit>
+      <trans-unit id="canvasTitleChatView" datatype="html">
+        <source>Send a drawing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <note priority="1" from="description">Canvas Title chatView</note>
+        <note priority="1" from="meaning">Canvas Title chatView</note>
+      </trans-unit>
+      <trans-unit id="canvasSubTitleChatView" datatype="html">
+        <source>
+            <x id="START_ITALIC_TEXT" ctype="x-i"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Use your mouse to draw on the canvas
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\chat-view\chat-view.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Canvas subTitle chatView</note>
+        <note priority="1" from="meaning">Canvas subTitle chatView</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
