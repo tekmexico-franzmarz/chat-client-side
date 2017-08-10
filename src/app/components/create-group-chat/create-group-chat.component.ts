@@ -132,7 +132,7 @@ export class CreateGroupChatComponent implements OnInit {
         this.chat = JSON.parse(data._body);
         this.myProfile.conversations.push(this.chat);
         this.dataService.shallowProfileUpdate(this.myProfile);
-        //this.router.navigate(['./chat', this.chat._id]
+        this.router.navigate(['./chat', this.chat._id]);
       }
     );
   }

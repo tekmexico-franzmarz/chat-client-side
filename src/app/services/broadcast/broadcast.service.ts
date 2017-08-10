@@ -75,7 +75,13 @@ export class BroadcastService {
     })
   }
 
-  confirmMsgToServer(msg,contactInfo){
-    this.socket.emit('msg-complete',{msg,contactInfo})
+  confirmMsgToServer(msg,contactInfo,chatroom){
+    this.socket.emit('msg-complete',{msg,contactInfo,chatroom})
+  }
+  connectToRoom(chatroom){
+    this.socket.emit('connectTo-room',chatroom)
+  }
+  disconnectOfRoom(chatroom){
+    this.socket.emit('disconnectOf-room',chatroom)
   }
 }

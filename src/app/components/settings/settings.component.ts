@@ -27,12 +27,17 @@ export class SettingsComponent implements OnInit {
     { name: "English", locale: "en" },
     { name: "Español", locale: "es" }
   ];
-  public settingsData: {
+  /* public settingsData: {
     myId:String;
     usernameSetting: String;
     passwordSetting: String;
     languageSetting: String;
-  } = { myId: "",usernameSetting: "", passwordSetting: "", languageSetting: "" };
+  } = { myId: "",usernameSetting: "", passwordSetting: "", languageSetting: "" }; */
+  public settingsData: {
+    myId:String;
+    usernameSetting: String;
+    languageSetting: String;
+  } = { myId: "",usernameSetting: "", languageSetting: "" };
 
   constructor(
     private dataService: DataService,
@@ -48,14 +53,7 @@ export class SettingsComponent implements OnInit {
 
   buildForm(): void {
     this.profileSettingsForm = this.fb.group({
-      username: [this.settingsData.usernameSetting, [Validators.minLength(4)]],
-      passwords: this.fb.group(
-        {
-          password: [this.settingsData.passwordSetting],
-          confirmPassword: []
-        },
-        { validator: this.areEqual }
-      )
+      username: [this.settingsData.usernameSetting, [Validators.minLength(4)]]
     });
 
     this.languagesForm = this.fb.group({
@@ -68,7 +66,7 @@ export class SettingsComponent implements OnInit {
     this.onValueChanged();
   }
 
-  areEqual(group: FormGroup): any {
+  /* areEqual(group: FormGroup): any {
     let res = {};
     let password = group.get("password").value; // to get value in input tag
     let confirmPassword = group.get("confirmPassword").value; // to get value in input tag
@@ -80,7 +78,7 @@ export class SettingsComponent implements OnInit {
       return null;
     }
     return res;
-  }
+  } */
   onValueChanged(data?: any): void {
     if (!this.profileSettingsForm) {
       return;
@@ -101,26 +99,17 @@ export class SettingsComponent implements OnInit {
       }
     }
   }
-  formErrors: { "username": String; "passwords": String } = {
-    username: "",
-    passwords: ""
+  formErrors: { "username": String} = {
+    username: ""
   };
 
   validationMessages: {
     "username": {
       "minlength": String;
     };
-    "passwords": {
-      "areEqual": String;
-      "minlength": String;
-    };
   } = {
     username: {
       minlength: "Name must be at least 3 characters long."
-    },
-    passwords: {
-      areEqual: "Passwords must match",
-      minlength: "Password must be at least 6 characters long."
     }
   };
 
@@ -132,17 +121,18 @@ export class SettingsComponent implements OnInit {
 
   updateProfile() {
     console.log("this.profileSettingsForm.get('username').value=", this.profileSettingsForm.get("username").value);
-    console.log("this.profileSettingsForm.get('passwords.password').value=", this.profileSettingsForm.get('passwords.password').value);
+    //console.log("this.profileSettingsForm.get('passwords.password').value=", this.profileSettingsForm.get('passwords.password').value);
     this.settingsData.myId=this.myProfile._id;
     if(this.profileSettingsForm.get("username").value)this.settingsData.usernameSetting=this.profileSettingsForm.get("username").value;
-    if(this.profileSettingsForm.get("passwords.password").value)this.settingsData.passwordSetting=this.profileSettingsForm.get("passwords.password").value;
+    //if(this.profileSettingsForm.get("passwords.password").value)this.settingsData.passwordSetting=this.profileSettingsForm.get("passwords.password").value;
     console.log("This.settingsData=", this.settingsData);
     this.dataService.updateMyProfile(this.settingsData).subscribe(
       data => {
-        console.log("Response from server=", data);
-        this.myProfile=this.dataService.getMyProfile();
-        console.log("My New Updated Profile=", this.myProfile);
-        this.router.navigate(['./main'])
+        console.log("Response from server=", data.json());
+        this.myProfile=data.json();
+        this.dataService.shallowProfileUpdate(this.myProfile);
+        //this.router.navigate(['dashboard'])
+        window.location.href = `http://localhost:3000/${this.myProfile.locale}/#/dashboard`;
       }
     );
   }

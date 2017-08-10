@@ -20,7 +20,7 @@ export class ChatViewComponent implements OnInit {
   param: any;
   contactId: string;
   myProfile: MyProfileDataInterface;
-  conversationId;
+  conversationId:string="";
   conversationConfig;
   chat;
   arrMessages: Array<{}> = [];
@@ -58,6 +58,7 @@ export class ChatViewComponent implements OnInit {
     this.myProfile = this.dataService.getMyProfile();
     this.paramMapSubscription$ = route.paramMap.subscribe(params => {
       this.param = params;
+      if(this.conversationId)this.broadcastService.disconnectOfRoom(this.conversationId);
       this.conversationId = this.param.params.conversationId;
       this.chat = this.chatTemplate;
       this.arrMessages = [];
@@ -67,6 +68,7 @@ export class ChatViewComponent implements OnInit {
         (data: any) => {
           this.chat = JSON.parse(data._body);
           //console.log("Fetched Conversation=", this.chat);
+          this.broadcastService.connectToRoom(this.conversationId);
           for (let i = 0; i < this.chat.messages.length; i++) {
             if (this.chat.messages[i].userId == this.myProfile._id) {
               this.chat.messages[i].position = "right"
@@ -135,7 +137,7 @@ export class ChatViewComponent implements OnInit {
     this.chatService.sendMessage(obj).subscribe((data) => {
       var contactId: String;
       this.filteredContact = this.filterParticipant(this.chat.participants, this.myProfile._id)
-      this.broadcastService.confirmMsgToServer(obj, this.filteredContact);
+      this.broadcastService.confirmMsgToServer(obj, this.filteredContact,this.conversationId);
       obj["position"] = "right"
       this.arrMessages.push(obj);
     },
@@ -161,7 +163,7 @@ export class ChatViewComponent implements OnInit {
       //console.log("Message DB updated || data=",data)
       this.filteredContact = this.filterParticipant(this.chat.participants, this.myProfile._id)
       //console.log("Contact ID=",this.filteredContact)
-      this.broadcastService.confirmMsgToServer(obj, this.filteredContact);
+      this.broadcastService.confirmMsgToServer(obj, this.filteredContact,this.conversationId);
       obj["position"] = "right"
       this.arrMessages.push(obj);
     },

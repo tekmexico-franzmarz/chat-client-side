@@ -6,7 +6,7 @@
 </ol>
 
 <div class="container">
-  <form class="form-horizontal" [formGroup]="profileSettingsForm"  novalidate>
+  <form class="form-horizontal" [formGroup]="profileSettingsForm" novalidate>
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div formGroupName="passwords">
+    <!-- <div formGroupName="passwords">
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-3">
@@ -47,8 +47,7 @@
           <div class="form-group">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
               <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" i18n-placeholder="Password placeholder"
-                >
+              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" i18n-placeholder="Password placeholder">
             </div>
           </div>
         </div>
@@ -77,14 +76,14 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-3">
-          <label for="lang" i18n="Label changeLang Settings|Label changeLang Settings@@labelChangeLangSettings">Change Language</label>
-        </div>
-        <div class="col-md-5">
-          <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#chooseLanguage" style="cursor:pointer" i18n="Button changeLang Settings|Button changeLang Settings@@btnChangeLangSettings"><i class="fa fa-flag-o"></i> Languages</button>
-        </div>
+    </div> -->
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <label for="lang" i18n="Label changeLang Settings|Label changeLang Settings@@labelChangeLangSettings">Change Language</label>
+      </div>
+      <div class="col-md-5">
+        <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#chooseLanguage" style="cursor:pointer" i18n="Button changeLang Settings|Button changeLang Settings@@btnChangeLangSettings"><i class="fa fa-flag-o"></i> Languages</button>
       </div>
     </div>
     <div class="row" style="margin-top:15px">
@@ -114,19 +113,19 @@
           </div>
           <div class="list-group list-group-flush small">
             <form [formGroup]="languagesForm">
-                <div class="list-group-item list-group-item-action" *ngFor="let language of availableLanguages; index as i">
-                  <div class="media">
-                    <div class="media-body">
-                      <label class="custom-control custom-radio">
+              <div class="list-group-item list-group-item-action" *ngFor="let language of availableLanguages; index as i">
+                <div class="media">
+                  <div class="media-body">
+                    <label class="custom-control custom-radio">
                         <input type="radio" value="{{language.locale}}" class="custom-control-input" formControlName="selectedLanguage">
                         <span class="custom-control-indicator"></span>
                         <span class="custom-control-description"><strong>{{language.name}}</strong></span>
                       </label>
-                    </div>
                   </div>
                 </div>
+              </div>
 
-                <!-- <div class="list-group-item list-group-item-action">
+              <!-- <div class="list-group-item list-group-item-action">
                   <div class="media">
                     <div class="media-body">
                       <label class="custom-control custom-radio">
@@ -148,7 +147,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal" style="cursor:pointer" i18n="Button Cancel Modal Settings|Button Cancel Modal Settings@@btnCancelModalSettings">Cancel</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveLanguage(languagesForm)" style="cursor:pointer" i18n="Button Done Modal Settings|Button Done Modal Settings@@btnDoneModalSettings">Done</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveLanguage(languagesForm)" style="cursor:pointer"
+          i18n="Button Done Modal Settings|Button Done Modal Settings@@btnDoneModalSettings">Done</button>
       </div>
     </div>
   </div>
